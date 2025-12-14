@@ -15,7 +15,7 @@ import temp from "@/../public/tempsPre.png"; // Temps
 import epic from "@/../public/epicPre.png"; // Epic Games Clone
 import dash from "@/../public/dashPre.png"; // Epic Games Clone
 import mcg from "@/../public/mcgPre.png"; // Epic Games Clone
-import post from "@/../public/playaPre.png"; // Epic Games Clone
+import post from "@/../public/postPre.png"; // Epic Games Clone
 
 export const baroqueWorks = [
   {
@@ -35,7 +35,7 @@ export const baroqueWorks = [
   {
     image: dash.src,
     link: "https://the-dashboard-klnd.vercel.app/",
-    title: "PlayerOrbit",
+    title: "Dashboard",
     description:
       "This dashboard represents my switch form React to Next JS, this transition taught me a lot about Next JS and what upgrade feels like. ",
   },

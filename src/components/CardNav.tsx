@@ -33,6 +33,60 @@ export interface CardNavProps {
   buttonTextColor?: string;
 }
 
+const navItems: CardNavItem[] = [
+  {
+    label: "About",
+    bgColor: "#0f0a1f",
+    textColor: "#fff",
+    links: [
+      {
+        label: "Me",
+        href: "/about",
+        ariaLabel: "About me",
+      },
+    ],
+  },
+  {
+    label: "Projects",
+    bgColor: "#130c2e",
+    textColor: "#fff",
+    links: [
+      {
+        label: "Featured",
+        href: "/projects",
+        ariaLabel: "Featured projects",
+      },
+      {
+        label: "Case Studies",
+        href: "/case-studies",
+        ariaLabel: "Project case studies",
+      },
+    ],
+  },
+  {
+    label: "Contact",
+    bgColor: "#1a1338",
+    textColor: "#fff",
+    links: [
+      {
+        label: "Email",
+        href: "mailto:retro@email.com",
+        ariaLabel: "Send email",
+      },
+      {
+        label: "Github",
+        href: "https://github.com/retro",
+        ariaLabel: "GitHub profile",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://linkedin.com/in/retro",
+        ariaLabel: "LinkedIn profile",
+      },
+    ],
+  },
+];
+
 const CardNav: React.FC<CardNavProps> = ({
   logo,
   logoAlt = "Logo",

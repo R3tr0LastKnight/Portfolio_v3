@@ -89,7 +89,7 @@ const page = () => {
       <div className="flex flex-col gap-4 items-center w-72">
         <h1 className="font-bold text-3xl mb-4">Stats</h1>
 
-        <div className="flex flex-col w-full gap-4">
+        <div className="flex flex-col w-full gap-4 dark:text-black">
           <div className="bg-zinc-50 rounded-lg px-4 py-2 flex gap-2 text-xl">
             <h2 className="font-medium">Projects worked on :</h2>
             <GradientText

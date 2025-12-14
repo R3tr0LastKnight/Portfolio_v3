@@ -33,7 +33,7 @@ export default function RootLayout({
         {
           label: "Me",
           ariaLabel: "About Me",
-          href: "/about/me",
+          href: "/about",
         },
       ],
     },
@@ -43,14 +43,9 @@ export default function RootLayout({
       textColor: "#fff",
       links: [
         {
-          label: "Featured",
-          ariaLabel: "Featured Projects",
-          href: "/projects/featured",
-        },
-        {
-          label: "Case Studies",
-          ariaLabel: "Project Case Studies",
-          href: "/projects/case-studies",
+          label: "Recent Works",
+          ariaLabel: "projects",
+          href: "/projects",
         },
       ],
     },
@@ -66,7 +61,7 @@ export default function RootLayout({
         },
         {
           label: "Github",
-          ariaLabel: "Twitter",
+          ariaLabel: "Github",
           href: "https://github.com/R3tr0LastKnight",
         },
         {

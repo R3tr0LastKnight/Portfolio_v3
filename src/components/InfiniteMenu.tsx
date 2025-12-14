@@ -1322,16 +1322,18 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           text-[2.5rem]
           lg:text-[4rem]
           transform
-          -top-1/2
-          translate-x-[5%]
+          top-[20%]
+          w-screen
+          
           lg:top-1/2
           lg:-translate-y-1/2
           lg:left-[5%]
+          lg:w-[20%]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           hover:underline
-          lg:w-[20%]
           cursor-pointer
+          text-center
           ${
             isMoving
               ? "opacity-0 pointer-events-none duration-[100ms]"
@@ -1349,7 +1351,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           w-[80%]
           lg:w-[20%]
           absolute
-          top-full
+          top-[60%]
           left-[80%]
           lg:left-[90%]
           lg:top-1/2
