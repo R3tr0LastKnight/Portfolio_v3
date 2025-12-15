@@ -1,39 +1,49 @@
 import Carousel from "@/components/Carousel";
+import GlareHover from "@/components/GlareHover";
 import HomeHero from "@/components/HomeHero";
+import MagnetLines from "@/components/MagnetLines";
 import Projects from "@/components/Projects";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { IconCloud } from "@/components/ui/icon-cloud";
+import Image from "next/image";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
 const slugs = [
+  "react",
+  "nextdotjs",
+  "tailwindcss",
   "typescript",
   "javascript",
-  "react",
   "nodedotjs",
   "mongodb",
-  "tailwindcss",
   "redux",
-  "html5",
-  "css3",
-  "express",
-  "nextdotjs",
   "prisma",
-  "amazonaws",
+  "shadcnui",
+  "express",
   "firebase",
+  "mysql",
   "vercel",
-  "git",
   "github",
-  "gitlab",
-  "visualstudiocode",
   "figma",
+  "html5",
+  "css",
 ];
 
 export default function Home() {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
+  const images = slugs.map((slug) => {
+    const needsColor = [
+      "css3",
+      "expressdotjs",
+      "amazonaws",
+      "visualstudiocode",
+    ].includes(slug);
+
+    return needsColor
+      ? `https://cdn.simpleicons.org/${slug}?color=ffffff`
+      : `https://cdn.simpleicons.org/${slug}`;
+  });
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-white font-sans dark:bg-black mb-6">
@@ -116,8 +126,40 @@ export default function Home() {
           </div>
         </div>
         <Projects />
-        <div className="flex flex-col items-center gap-6 my-12">
-          <h1 className="text-4xl font-bold ">Skillset</h1>
+        <div className="flex flex-col mx-16 gap-6 my-12">
+          <h1 className="text-4xl font-bold text-center  ">Skill Tree</h1>
+          <div className="flex flex-col lg:flex-row justify-evenly">
+            <div className="grid grid-cols-3 lg:grid-cols-5 gap-3 -gap-y-4 ">
+              {images.map((src, i) => (
+                <div
+                  key={i}
+                  className="h-20 w-20    bg-white/90 border-black/80 p-4 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out"
+                >
+                  <Image
+                    src={src}
+                    alt={images[i]}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                    unoptimized
+                  />
+                </div>
+              ))}
+            </div>
+            <div>
+              <MagnetLines
+                rows={9}
+                columns={9}
+                containerSize="45vmin"
+                lineColor="gray"
+                lineWidth="0.8vmin"
+                lineHeight="5vmin"
+                baseAngle={0}
+                className="dark:text-white text-black"
+                style={{ margin: "2rem auto" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

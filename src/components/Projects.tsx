@@ -2,7 +2,8 @@ import React from "react";
 import Carousel from "./Carousel";
 import Link from "next/link";
 import { AnimatedShinyText } from "./ui/animated-shiny-text";
-import LightRays from "./LightRays";
+import Balatro from "./Balatro";
+import LiquidChrome from "./LiquidChrome";
 
 const Projects = () => {
   return (
@@ -10,17 +11,16 @@ const Projects = () => {
       <h1 className="text-4xl font-bold ">Recent Projects</h1>
       <div className="flex  justify-center items-center flex-col gap-6 border dark:border-white/50 py-8 rounded-lg overflow-hidden w-[90%] relative">
         <div className="absolute top-0 w-full h-full">
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#ffffff"
-            raysSpeed={1.5}
-            lightSpread={0.8}
-            rayLength={1.2}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0.1}
-            distortion={0.05}
-            className="custom-rays"
+          {/* <Balatro
+            isRotate={false}
+            mouseInteraction={false}
+            pixelFilter={700}
+          /> */}
+          <LiquidChrome
+            baseColor={[0.1, 0.1, 0.1]}
+            speed={0.1}
+            amplitude={0.4}
+            interactive={false}
           />
         </div>
         <div className="flex justify-center items-center relative mx-16 z-30">

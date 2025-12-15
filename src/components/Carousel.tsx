@@ -37,11 +37,11 @@ export interface CarouselProps {
 }
 
 const requiredNames = [
-  "PlayerOrbit",
-  "Delphi Analytics",
+  "The MCG",
+  "Postify",
   "Sneak peek",
   "Rune Chat",
-  "World Seeker",
+  "Player Orbit",
 ];
 
 const DEFAULT_ITEMS: CarouselItem[] = baroqueWorks
@@ -294,6 +294,7 @@ export default function Carousel({
         w-full
         sm:max-w-[${baseWidth}px]
         lg:max-w-none
+        bg-white/80 dark:bg-black/80
         ${
           round
             ? "rounded-full border border-white"
