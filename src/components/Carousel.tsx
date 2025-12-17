@@ -12,7 +12,7 @@ import {
   FiLayers,
   FiLayout,
 } from "react-icons/fi";
-import { baroqueWorks } from "@/app/projects/baroqueWorks";
+import { baroqueWorks } from "@/app/baroqueWorks";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
@@ -41,7 +41,7 @@ const requiredNames = [
   "Postify",
   "Sneak peek",
   "Rune Chat",
-  "Player Orbit",
+  "PlayerOrbit",
 ];
 
 const DEFAULT_ITEMS: CarouselItem[] = baroqueWorks

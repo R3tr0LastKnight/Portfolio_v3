@@ -10,7 +10,7 @@ const Projects = () => {
     <div className="flex flex-col items-center gap-6">
       <h1 className="text-4xl font-bold ">Recent Projects</h1>
       <div className="flex  justify-center items-center flex-col gap-6 border dark:border-white/50 py-8 rounded-lg overflow-hidden w-[90%] relative">
-        <div className="absolute top-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full">
           {/* <Balatro
             isRotate={false}
             mouseInteraction={false}

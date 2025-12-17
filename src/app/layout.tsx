@@ -43,9 +43,14 @@ export default function RootLayout({
       textColor: "#fff",
       links: [
         {
-          label: "Recent Works",
+          label: "Project Globe",
           ariaLabel: "projects",
           href: "/projects",
+        },
+        {
+          label: "Project List",
+          ariaLabel: "projects",
+          href: "/project-list",
         },
       ],
     },

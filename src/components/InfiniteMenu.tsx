@@ -2,6 +2,7 @@
 
 import { FC, useRef, useState, useEffect, MutableRefObject } from "react";
 import { mat4, quat, vec2, vec3 } from "gl-matrix";
+import { GoArrowUpRight } from "react-icons/go";
 
 const discVertShaderSource = `#version 300 es
 
@@ -1328,12 +1329,16 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           lg:top-1/2
           lg:-translate-y-1/2
           lg:left-[5%]
-          lg:w-[20%]
+          lg:w-[30%]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           hover:underline
           cursor-pointer
           text-center
+          flex
+          items-center
+          justify-center
+          gap-2
           ${
             isMoving
               ? "opacity-0 pointer-events-none duration-[100ms]"
@@ -1342,6 +1347,10 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
         `}
           >
             {activeItem.title}
+            <GoArrowUpRight
+              className="nav-card-link-icon shrink-0"
+              aria-hidden="true"
+            />
           </h2>
 
           <p

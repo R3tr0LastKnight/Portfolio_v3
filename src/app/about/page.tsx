@@ -29,56 +29,65 @@ const page = () => {
       <div className="flex flex-col w-96 relative dark:text-white text-black gap-4">
         <div className="px-4 py-4 rounded-lg bg-white-50 dark:shadow-[0_1px_7px_rgb(255,255,255,0.2)]">
           <LightRays />
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde dolores
-          molestias atque, vitae corrupti architecto temporibus autem, nobis
-          velit at officiis ut sapiente eos, aut quas porro reprehenderit sed
-          in? Excepturi, vitae inventore nemo a iure illo sed exercitationem nam
-          sequi enim, id facilis dolorem sit fugiat aperiam, sunt magni?
-          Nostrum, distinctio aliquid esse cumque deleniti laboriosam ipsam.
-          Voluptates, temporibus. Consectetur odio neque reprehenderit adipisci
-          odit sapiente nam quas, suscipit ipsa, error exercitationem tempora
-          tempore id tenetur accusantium quo quam architecto enim doloremque,
-          iure nulla repudiandae. Nesciunt voluptas ratione ex.
+          Beyond day-to-day development, I enjoy working at the intersection of
+          engineering and design, where attention to detail and user experience
+          matter as much as functionality. I’m comfortable collaborating across
+          teams, translating requirements into reliable solutions, and iterating
+          quickly based on feedback. Whether I’m building a polished UI,
+          integrating APIs, or improving performance and accessibility, I aim to
+          write code that is clear, scalable, and built to last.
         </div>
         <div className="relative">
           <Dock magnification={60} distance={80}>
             <DockIcon className="bg-black/10 dark:bg-white/10 ">
-              <IoLogoGithub className="size-8" />
+              <Link href={"https://github.com/R3tr0LastKnight"}>
+                <IoLogoGithub className="size-8" />
+              </Link>
             </DockIcon>
             <DockIcon className="bg-black/10 dark:bg-white/10">
-              <FaLinkedin className="size-8" />
+              <Link href={"https://www.linkedin.com/in/shubh-shahu/"}>
+                <FaLinkedin className="size-8" />
+              </Link>
             </DockIcon>
             <DockIcon className="bg-black/10 dark:bg-white/10">
-              <IoMail className="size-8" />
+              <Link href={"mailto:shubh14shahu@gmail.com"}>
+                <IoMail className="size-8" />
+              </Link>
             </DockIcon>
           </Dock>
         </div>
       </div>
       <div>
-        <div className="flex gap-4">
-          <IoIosCheckmarkCircle className="size-10" />
-          <div>
-            <h1 className="font-bold">PlayerOrbit </h1>
-            <h2>Frotnent Web Dev Intern</h2>
-            <h2 className="font-light text-xs">Aug 2023 -Aug 2024</h2>
+        <div className="flex gap-4 w-80">
+          <IoIosCheckmarkCircle className="size-12" />
+          <div className="relative w-full">
+            <div className="absolute">
+              <h1 className="font-bold">PlayerOrbit </h1>
+              <h2>Frotnent Web Dev Intern</h2>
+              <h2 className="font-light text-xs">Aug 2023 -Aug 2024</h2>
+            </div>
           </div>
         </div>
         <div className="w-1 bg-black dark:bg-white h-20 rounded-full ml-4.5"></div>
         <div className="flex gap-4">
-          <IoIosCheckmarkCircle className="size-10" />
-          <div>
-            <h1 className="font-bold">Freelance Web Developer</h1>
-            <h2>Full Stack web Developer</h2>
-            <h2 className="font-light text-xs">Aug 2024 - Oct 2024</h2>
+          <IoIosCheckmarkCircle className="size-12" />
+          <div className="relative w-full">
+            <div className="absolute">
+              <h1 className="font-bold">Freelance Web Developer</h1>
+              <h2>Full Stack web Developer</h2>
+              <h2 className="font-light text-xs">Aug 2024 - Oct 2024</h2>
+            </div>
           </div>
         </div>
         <div className="w-1 bg-black dark:bg-white h-20 rounded-full ml-4.5"></div>
         <div className="flex gap-4">
-          <MdRadioButtonChecked className="size-10" />
-          <div>
-            <h1 className="font-bold">TCS</h1>
-            <h2>Software Developer</h2>
-            <h2 className="font-light text-xs">Oct 2024 - Present</h2>
+          <MdRadioButtonChecked className="size-12" />
+          <div className="relative w-full">
+            <div className="absolute">
+              <h1 className="font-bold">TCS</h1>
+              <h2>Software Developer</h2>
+              <h2 className="font-light text-xs">Oct 2024 - Present</h2>
+            </div>
           </div>
         </div>
         <div className="w-1 bg-black dark:bg-white h-12 rounded-full ml-4.5 "></div>

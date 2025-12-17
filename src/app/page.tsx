@@ -5,10 +5,14 @@ import MagnetLines from "@/components/MagnetLines";
 import Projects from "@/components/Projects";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { Dock, DockIcon } from "@/components/ui/dock";
 import { IconCloud } from "@/components/ui/icon-cloud";
 import Image from "next/image";
 import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
+import { IoLogoGithub } from "react-icons/io";
+import { IoMail } from "react-icons/io5";
 
 const slugs = [
   "react",
@@ -51,30 +55,58 @@ export default function Home() {
         <div className="absolute top-28 z-0  w-full">
           <HomeHero />
         </div>
-        <div className="flex flex-col lg:flex-row mt-[60vh] w-full px-12 gap-12 relative z-20">
+        <div className="flex flex-col lg:flex-row mt-[75vh] w-full px-12 gap-12 relative z-20 mb-12">
           <div>
-            <h1 className="text-4xl font-bold">Shubh Shahu</h1>
-            <h2 className="text-2xl font-semibold">Software Developer</h2>
+            <div className="flex flex-col lg:flex-row justify-between items-center">
+              <div>
+                <h1 className="text-4xl font-bold">Shubh Shahu</h1>
+                <h2 className="text-2xl font-semibold">Software Developer</h2>
+              </div>
+              <div className="relative flex justify-center items-center">
+                <Dock magnification={60} distance={80}>
+                  <DockIcon className="bg-black/10 dark:bg-white/10 ">
+                    <Link href={"https://github.com/R3tr0LastKnight"}>
+                      <IoLogoGithub className="size-8" />
+                    </Link>
+                  </DockIcon>
+                  <DockIcon className="bg-black/10 dark:bg-white/10">
+                    <Link href={"https://www.linkedin.com/in/shubh-shahu/"}>
+                      <FaLinkedin className="size-8" />
+                    </Link>
+                  </DockIcon>
+                  <DockIcon className="bg-black/10 dark:bg-white/10">
+                    <Link href={"mailto:shubh14shahu@gmail.com"}>
+                      <IoMail className="size-8" />
+                    </Link>
+                  </DockIcon>
+                </Dock>
+              </div>
+            </div>
+
             <div className="flex flex-col gap-4 mt-4">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                exercitationem, vero velit unde distinctio quis explicabo. Ipsum
-                consectetur quaerat, porro magnam est corrupti ullam
-                perspiciatis amet temporibus esse nesciunt impedit? Fugiat
-                exercitationem, voluptas officiis provident totam ad modi
-                explicabo aspernatur hic deleniti tempore iure nobis. Unde
-                ipsum, ipsam distinctio itaque velit nisi quis voluptate cum
-                vero illo, sunt, minus cupiditate.
+                I’m a software developer with hands-on experience building
+                modern, scalable web applications across startups, freelance
+                projects, and enterprise environments. My core expertise lies in
+                frontend development with React, Next.js, TypeScript, and
+                Tailwind CSS, where I focus on creating clean, responsive
+                interfaces backed by thoughtful state management and performance
+                optimization. Over the past couple of years, I’ve worked on
+                production-grade applications ranging from consumer-facing
+                platforms to internal dashboards, always prioritizing usability,
+                maintainability, and clean architecture.
               </p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                exercitationem, vero velit unde distinctio quis explicabo. Ipsum
-                consectetur quaerat, porro magnam est corrupti ullam
-                perspiciatis amet temporibus esse nesciunt impedit? Fugiat
-                exercitationem, voluptas officiis provident totam ad modi
-                explicabo aspernatur hic deleniti tempore iure nobis. Unde
-                ipsum, ipsam distinctio itaque velit nisi quis voluptate cum
-                vero illo, sunt, minus cupiditate.
+                Professionally, I’ve contributed to impactful projects such as
+                enhancing user growth through interactive gameplay features,
+                streamlining content workflows via custom API integrations, and
+                modernizing legacy systems with real-time, scalable solutions.
+                Currently, I work as a Software Developer at Tata Consultancy
+                Services, where I collaborate on enterprise web applications
+                using React, SQL, and the .NET ecosystem. I enjoy solving
+                real-world problems through code, continuously refining my
+                craft, and building digital experiences that are both functional
+                and intuitive.
               </p>
             </div>
             <Link
@@ -127,26 +159,28 @@ export default function Home() {
         </div>
         <Projects />
         <div className="flex flex-col mx-16 gap-6 my-12">
-          <h1 className="text-4xl font-bold text-center  ">Skill Tree</h1>
+          <h1 className="text-4xl font-bold text-center  ">
+            Technologies Unlocked
+          </h1>
           <div className="flex flex-col lg:flex-row justify-evenly">
-            <div className="grid grid-cols-3 lg:grid-cols-5 gap-3 -gap-y-4 ">
+            <div className="grid grid-cols-2 lg:grid-cols-9 gap-1 ">
               {images.map((src, i) => (
                 <div
                   key={i}
-                  className="h-20 w-20    bg-white/90 border-black/80 p-4 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out"
+                  className="h-20 w-full lg:w-20 group bg-white/50 border-black/80 p-4 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out"
                 >
                   <Image
                     src={src}
                     alt={images[i]}
                     width={40}
                     height={40}
-                    className="h-10 w-10"
+                    className="h-10 w-10 group-hover:scale-125 transition-transform duration-300 ease-in-out"
                     unoptimized
                   />
                 </div>
               ))}
             </div>
-            <div>
+            {/* <div>
               <MagnetLines
                 rows={9}
                 columns={9}
@@ -158,7 +192,7 @@ export default function Home() {
                 className="dark:text-white text-black"
                 style={{ margin: "2rem auto" }}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

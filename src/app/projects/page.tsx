@@ -1,6 +1,6 @@
 import InfiniteMenu from "@/components/InfiniteMenu";
 import React from "react";
-import { baroqueWorks } from "./baroqueWorks";
+import { baroqueWorks } from "../baroqueWorks";
 
 const page = () => {
   return (
