@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="flex flex-col  min-h-screen items-center mt-32 bg-white font-sans dark:bg-black mb-6">
       <h1 className="font-bold text-4xl mb-12">Project List</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center justify-center mx-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center justify-center mx-4 lg:mx-16">
         {baroqueWorks.map((item, i) => (
           <div
             key={i}
