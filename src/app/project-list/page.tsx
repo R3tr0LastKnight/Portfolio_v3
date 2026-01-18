@@ -8,13 +8,13 @@ const page = () => {
   return (
     <div className="flex flex-col  min-h-screen items-center mt-32 bg-white font-sans dark:bg-black mb-6">
       <h1 className="font-bold text-4xl mb-12">Project List</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center justify-center mx-4 lg:mx-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center mx-4 lg:mx-16">
         {baroqueWorks.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col items-center justify-center rounded-2xl overflow-hidden dark:shadow-[0_3px_10px_rgb(255,255,255,0.4)] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+            className="flex flex-col items-center justify-center rounded-2xl overflow-hidden dark:shadow-[0_3px_10px_rgb(33,33,33,0.9)] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
           >
-            <div className="flex w-full h-[31vh] overflow-hidden ">
+            <div className="flex w-full lg:h-[31vh] overflow-hidden ">
               <Image
                 width={600}
                 height={200}

@@ -157,7 +157,7 @@ const CardNav: React.FC<CardNavProps> = ({
     tl.to(
       cardsRef.current,
       { y: 0, opacity: 1, duration: 0.4, ease, stagger: 0.08 },
-      "-=0.1"
+      "-=0.1",
     );
 
     return tl;
@@ -302,7 +302,6 @@ const CardNav: React.FC<CardNavProps> = ({
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    target="_"
                     className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}

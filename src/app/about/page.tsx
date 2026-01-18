@@ -12,9 +12,43 @@ import { MdRadioButtonChecked } from "react-icons/md";
 import CountUp from "@/components/CountUp";
 import GradientText from "@/components/GradientText";
 
+const slugs = [
+  "react",
+  "nextdotjs",
+  "tailwindcss",
+  "typescript",
+  "javascript",
+  "nodedotjs",
+  "mongodb",
+  "redux",
+  "prisma",
+  "shadcnui",
+  "express",
+  "firebase",
+  "mysql",
+  "vercel",
+  "github",
+  "figma",
+  "html5",
+  "css",
+];
+
 const page = () => {
+  const images = slugs.map((slug) => {
+    const needsColor = [
+      "css3",
+      "expressdotjs",
+      "amazonaws",
+      "visualstudiocode",
+    ].includes(slug);
+
+    return needsColor
+      ? `https://cdn.simpleicons.org/${slug}?color=ffffff`
+      : `https://cdn.simpleicons.org/${slug}`;
+  });
+
   return (
-    <div className="flex flex-col lg:flex-row my-16 lg:mt-0 min-h-screen items-center mx-12 pt-12 font-sans dark:bg-black gap-12">
+    <div className="flex flex-col lg:flex-row my-16 lg:my-0 min-h-screen items-center mx-12 pt-12 font-sans dark:bg-black gap-12">
       <div className="flex flex-col gap-4">
         <div>
           <h1 className="text-4xl font-semibold">Shubh Shahu</h1>{" "}
@@ -171,23 +205,24 @@ const page = () => {
               />
             </GradientText>
           </div>
-          <div className="bg-zinc-50 rounded-lg px-4 py-2 flex gap-2 text-xl">
-            <h2 className="font-medium">Tech skills learnt :</h2>
-            <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={3}
-              showBorder={false}
-              className="custom-class"
-            >
-              <CountUp
-                from={0}
-                to={21}
-                separator=","
-                direction="up"
-                duration={1}
-                className="count-up-text font-bold"
-              />
-            </GradientText>
+        </div>
+        <div className="flex flex-col lg:flex-row justify-evenly mt-4">
+          <div className="grid grid-cols-2 lg:grid-cols-6 gap-1 ">
+            {images.map((src, i) => (
+              <div
+                key={i}
+                className="h-20 w-full lg:w-6 lg:h-6 group bg-white/50 border-black/80 p-1 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out"
+              >
+                <Image
+                  src={src}
+                  alt={images[i]}
+                  width={10}
+                  height={10}
+                  className="h-4 w-4 group-hover:scale-125 transition-transform duration-300 ease-in-out"
+                  unoptimized
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
