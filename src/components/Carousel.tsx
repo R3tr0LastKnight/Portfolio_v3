@@ -133,7 +133,7 @@ function CarouselItem({
           />
         </div>
 
-        <p className="text-sm ">{item.description}</p>
+        <p className="text-sm select-none">{item.description}</p>
       </div>
     </motion.div>
   );
@@ -252,15 +252,15 @@ export default function Carousel({
 
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
+    info: PanInfo,
   ): void => {
     const { offset, velocity } = info;
     const direction =
       offset.x < -DRAG_BUFFER || velocity.x < -VELOCITY_THRESHOLD
         ? 1
         : offset.x > DRAG_BUFFER || velocity.x > VELOCITY_THRESHOLD
-        ? -1
-        : 0;
+          ? -1
+          : 0;
 
     if (direction === 0) return;
 
@@ -284,8 +284,8 @@ export default function Carousel({
     items.length === 0
       ? 0
       : loop
-      ? (position - 1 + items.length) % items.length
-      : Math.min(position, items.length - 1);
+        ? (position - 1 + items.length) % items.length
+        : Math.min(position, items.length - 1);
 
   return (
     <div
@@ -354,8 +354,8 @@ export default function Carousel({
                     ? "bg-white"
                     : "bg-[#333333]"
                   : round
-                  ? "bg-[#555]"
-                  : "bg-[rgba(51,51,51,0.4)]"
+                    ? "bg-[#555]"
+                    : "bg-[rgba(51,51,51,0.4)]"
               }`}
               animate={{
                 scale: activeIndex === index ? 1.2 : 1,
