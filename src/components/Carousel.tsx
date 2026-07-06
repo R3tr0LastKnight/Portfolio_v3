@@ -133,7 +133,7 @@ function CarouselItem({
           />
         </div>
 
-        <p className="text-sm select-none">{item.description}</p>
+        <p className="text-sm select-none line-clamp-3">{item.description}</p>
       </div>
     </motion.div>
   );
@@ -291,6 +291,7 @@ export default function Carousel({
     <div
       ref={containerRef}
       className={`relative overflow-hidden p-4
+        
         w-full
         sm:max-w-[${baseWidth}px]
         lg:max-w-none

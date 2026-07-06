@@ -40,7 +40,7 @@ const Projects = () => {
             interactive={false}
           />
         </div>
-        <div className="flex justify-center items-center relative mx-16 z-30">
+        <div className="flex justify-center items-center relative lg:mx-16 z-30">
           <Carousel
             baseWidth={300}
             autoplay={false}
