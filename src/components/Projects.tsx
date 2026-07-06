@@ -4,11 +4,28 @@ import Link from "next/link";
 import { AnimatedShinyText } from "./ui/animated-shiny-text";
 import Balatro from "./Balatro";
 import LiquidChrome from "./LiquidChrome";
+import Shuffle from "./Shuffle";
 
 const Projects = () => {
   return (
     <div className="flex flex-col items-center gap-6">
-      <h1 className="text-4xl font-bold ">Recent Projects</h1>
+      {/* <h1 className="text-4xl font-bold ">Work Museum</h1> */}
+      <Shuffle
+        className="text-4xl font-bold"
+        text="Art Exibit"
+        shuffleDirection="right"
+        duration={0.5}
+        animationMode="evenodd"
+        shuffleTimes={1}
+        ease="power3.out"
+        stagger={0.03}
+        threshold={0.1}
+        triggerOnce={true}
+        triggerOnHover
+        respectReducedMotion={true}
+        loop={true}
+        loopDelay={2}
+      />
       <div className="flex  justify-center items-center flex-col gap-6 border dark:border-white/50 py-8 rounded-lg overflow-hidden w-[90%] relative">
         <div className="absolute top-0 left-0 w-full h-full">
           {/* <Balatro

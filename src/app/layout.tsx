@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import CardNav from "@/components/CardNav";
 import logo from "/logo.png";
+import ThemeInitializer from "@/components/ThemeInitializer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -108,6 +109,7 @@ export default function RootLayout({
             buttonTextColor="#fff"
             ease="power3.out"
           />
+          <ThemeInitializer />
           {children}
         </ThemeProvider>
       </body>

@@ -16,8 +16,16 @@ import epic from "@/../public/epicPre.png"; // Epic Games Clone
 import dash from "@/../public/dashPre.png"; // Epic Games Clone
 import mcg from "@/../public/mcgPre.png"; // Epic Games Clone
 import post from "@/../public/postPre.png"; // Epic Games Clone
+import world from "@/../public/worldPre.png";
 
 export const baroqueWorks = [
+  {
+    image: world.src,
+    link: "https://world-seeker-v2.vercel.app/",
+    title: "World Seeker",
+    description:
+      "A modern travel booking platform for discovering unique stays, exploring destinations, and managing trips. Built with Next.js, Prisma, MongoDB, and Firebase Authentication.",
+  },
   {
     image: mcg.src,
     link: "https://the-mcg.vercel.app/",
@@ -26,18 +34,18 @@ export const baroqueWorks = [
       "This is a music card game webapp made with React, where we can collect various music cards from artist's albums backed by Spotify's API ",
   },
   {
+    image: snek.src,
+    link: "https://sneak-peek.vercel.app/",
+    title: "Sneak peek",
+    description:
+      "This is a fullstack project made with mern stack in intention with selling shoes online market. This is a fully functional website, from login to secure payment thus feature compelete and client ready. ",
+  },
+  {
     image: post.src,
     link: "https://postify-six-rho.vercel.app/",
     title: "Postify",
     description:
       "This is a social media webapp made with Next JS to share your thought with fellow companions around the world.",
-  },
-  {
-    image: dash.src,
-    link: "https://the-dashboard-klnd.vercel.app/",
-    title: "Dashboard",
-    description:
-      "This dashboard represents my switch form React to Next JS, this transition taught me a lot about Next JS and what upgrade feels like. ",
   },
   {
     image: playa.src,
@@ -61,13 +69,6 @@ export const baroqueWorks = [
       "Real crm is my first major fullstack project I've picked up which had me working with various new technologies as per client needs and requirements. unfortunately this project cannot be shown by me to anyone due to being under nda. ",
   },
   {
-    image: snek.src,
-    link: "https://sneak-peek.vercel.app/",
-    title: "Sneak peek",
-    description:
-      "This is a fullstack project made with mern stack in intention with selling shoes online market. This is a fully functional website, from login to secure payment thus feature compelete and client ready. ",
-  },
-  {
     image: drn.src,
     link: "https://dark-rune-network.vercel.app/",
     title: "Rune Chat",
@@ -75,11 +76,11 @@ export const baroqueWorks = [
       "This is a chat app made with react in addition to firebase. This project taught me a lot about how messaging works and gave me valuable insights to firebase as all the messages are stored and retrived from there.",
   },
   {
-    image: ws.src,
-    link: "https://world-seeker.vercel.app/",
-    title: "World Seeker",
+    image: dash.src,
+    link: "https://the-dashboard-klnd.vercel.app/",
+    title: "Dashboard",
     description:
-      "This is a full stack booking website made in mern stack. here we can book our holiday package to some quite intresting places. Working on this i had quite a learning experience form react to aws.",
+      "This dashboard represents my switch form React to Next JS, this transition taught me a lot about Next JS and what upgrade feels like. ",
   },
   {
     image: ttt.src,

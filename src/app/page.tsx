@@ -1,3 +1,4 @@
+import ProjectList from "@/components/ProjectList";
 import dynamic from "next/dynamic";
 const HomeHero = dynamic(() => import("@/components/HomeHero"), {
   loading: () => <div>Loading...</div>,
@@ -67,6 +68,7 @@ export default function Home() {
           </div>
         </div>
         <Projects />
+        <ProjectList />
         <HomeTech images={images} />
       </div>
     </div>
